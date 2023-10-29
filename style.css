@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: aclonica;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: slategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clockBody{
+    position: relative;
+    height: 40vw;
+    width: 40vw;
+    /* background-color: burlywood; */
+    border-radius: 50%;
+    /* border: 2px solid black; */
+    box-shadow: -5px -5px 15px rgb(142, 160, 179),
+    8px 8px 25px rgba(0, 0, 0, 0.211);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#numbers{
+    position: absolute;
+    height: 38vw;
+    width: 38vw;
+    /* background-color: rgb(255, 160, 160); */
+    transform: rotate(-3deg);
+    border-radius: 50%;
+    /* overflow: hidden; */
+}
+#numbers span{
+    /* background-color: red; */
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform-origin: 0 19vw;
+    font-weight: normal;
+    font-size: 1.9em;
+    
+}
+#numbers b{
+    display: block;
+    font-weight: normal;
+}
+#circle{
+    height: 2.5vw;
+    width: 2.5vw;
+    /* background-color: rgb(51, 84, 118); */
+    background-color: rgb(9, 9, 9);
+    box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.211)
+    8px 8px 25px rgba(0, 0, 0, 0.211);
+    border-radius: 50%;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: oh balloney;
+    font-size: 1.5vw;
+}
+#hour,#minute,#second{
+    position: absolute;
+    border-radius: 1vw;
+}
+#hour{
+    top: 23.5%;
+    height: 27%;
+    width: 2.5%;
+    background-color: black;
+    transform-origin: bottom;
+    /* transform: rotate(30deg); */
+    /* display: none; */
+}
+#minute{
+    top: 15.5%;
+    height: 35%;
+    width: 1.5%;
+    background-color: black;
+    transform-origin: bottom;
+    /* display: none; */
+}
+#second{
+    top: 10.5%;
+    height: 40%;
+    width: .9%;
+    background-color: black;
+    transform-origin: bottom;
+    /* transform: rotate(90deg); */
+}
+@media (max-width: 500px){
+    #clockBody{
+        height: 90vw;
+        width: 90vw;
+    }
+    #numbers{
+        height: 86vw;
+        width: 86vw;
+        transform: rotate(-4deg);
+        /* background-color: rgb(255, 160, 160); */
+    }
+    #numbers span{
+        transform-origin: 0 44vw;
+        font-weight: normal;
+        font-size: 1.7em;
+        
+    }
+    #circle{
+        height: 5vw;
+        width: 5vw;
+    }
+}
